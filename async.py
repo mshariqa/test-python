@@ -22,7 +22,12 @@ async def main():
         )
 
 if __name__ == "__main__":
-    # Run the main function
+    '''
+    Note: We cannot use 'await main()' directly in the global scope because:
+    1. The 'await' keyword can only be used inside an async function
+    2. The global scope (top-level code) cannot be asynchronous
+    That's why we use asyncio.run() - it's the correct way to run async code from synchronous code
+    '''
     asyncio.run(main())
     
     # Print a message
