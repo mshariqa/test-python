@@ -1,0 +1,6 @@
+# Core dependencies
+openai-agents>=0.0.16
+python-dotenv
+rich>=14.0.0
+tensorflow>=2.19.0
+asyncio
