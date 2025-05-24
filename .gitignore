@@ -12,3 +12,6 @@ wheels/
 
 # UV package manager
 uv.lock
+
+# Environment variables
+.env
