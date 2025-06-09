@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Annotated
 
 class Director(BaseModel):
     name: str
@@ -6,7 +7,7 @@ class Director(BaseModel):
 
 class Movie(BaseModel):
     title: str
-    year: int
+    year: Annotated[int, "This is the release year of the movie"]  # Annotated field with a description
     genre: list[str]
     duration: int  # Duration in minutes
     rating: float = Field(default=5, ge=0, le=10)  # Optional rating field with constraints
